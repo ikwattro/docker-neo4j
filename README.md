@@ -1,16 +1,3 @@
-## FORK OF OFFICIAL [Neo4j-docker]
-
-## Changes done :
-
-* Runs Neo4j Enterprise 2.2.2
-* Possibility to define a custom Neo4j password via the `NEO4J_AUTH` env variable
-
-E.g.:
-
-```bash
-docker run -i -t --rm --name neo4j -v $HOME/_graphs/tests/data/ -p 8476:7474 -e NEO4J_AUTH=myPassword ikwattro/neo4j:enterprise-2.2.2
-```
-
 ## Container for Neo4j 2.2
 
 **Note: this is just _work in progress_ alpha state, not suited for production/serious use**
