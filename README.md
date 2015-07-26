@@ -1,8 +1,21 @@
+## FORK OF OFFICIAL [Neo4j-docker]
+
+## Changes done :
+
+* Runs Neo4j Enterprise 2.2.2
+* Possibility to define a custom Neo4j password via the `NEO4J_AUTH` env variable
+
+E.g.:
+
+```bash
+docker run -i -t --rm --name neo4j -v $HOME/_graphs/tests/data/ -p 8476:7474 -e NEO4J_AUTH=myPassword ikwattro/neo4j:enterprise-2.2.2
+```
+
 ## Container for Neo4j 2.2
 
 **Note: this is just _work in progress_ alpha state, not suited for production/serious use**
 
-Neo4j is an highly scalable, robust (fully ACID) native graph database. 
+Neo4j is an highly scalable, robust (fully ACID) native graph database.
 It is used in mission-critical apps by thousands of leading, startups, enterprises, and governments around the world.
 
 Learn more on http://neo4j.com and get started with http://neo4j.com/developer
@@ -31,7 +44,7 @@ docker run -i -t --rm --name neo4j -v $HOME/neo4j-data:/data -p 8476:7474 <image
 
 2. Open in browser
 
-     `http://localhost:8474` 
+     `http://localhost:8474`
 
 On OSX use http://boot2docker.io/[boot2docker] and replace localhost with the IP from `$DOCKERHOST` instead.
 
